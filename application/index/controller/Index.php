@@ -5,10 +5,10 @@ class Index
 {
     public function index()
     {
-        $akId = "";
-        $akSecret = "";
+        $akId = "";//此处填写你的AccessKey ID
+        $akSecret = "";//此处填写你的Access Key Secret
 
-        $url = "https://dtplus-cn-shanghai.data.aliyuncs.com/face/attribute";
+        $url = "https://dtplus-cn-shanghai.data.aliyuncs.com/face/attribute";//此处为请求的api地址请根据实际情况进行修改
 
         $content_arr['type'] = 0;
         $content_arr['image_url'] = '';
@@ -22,7 +22,7 @@ class Index
                     'date'=> gmdate("D, d M Y H:i:s \G\M\T"),
                     'authorization' => ''
                 ),
-                'method' => "POST", //可以是 GET, POST, DELETE, PUT
+                'method' => "POST", //可以是 GET, POST, DELETE, PUT 此处修改为了POST
                 'content' => $content, //如有数据，请用json_encode()进行编码
             )
         );
